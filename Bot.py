@@ -40,6 +40,7 @@ def keyboard(key_type="Normal"):
         markup.add(KeyboardButton("Normal"),KeyboardButton("Symbols"),KeyboardButton("🔙Delete"),KeyboardButton("✅Done"))
     return markup
 
+
 @bot.message_handler(commands=["start"])
 def start_message(message):
     bot.send_message(message.chat.id,"You can use the keyboard",reply_markup=keyboard())
